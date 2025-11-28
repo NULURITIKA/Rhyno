@@ -127,7 +127,13 @@
             border-radius: 10px;
             padding: 1.25rem;
             box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-            text-align: center;
+
+            /* cards flex column for equal bottom */
+            display: flex;
+            flex-direction: column;
+
+            /* overall text left; headings will be centered separately */
+            text-align: left;
         }
 
         .product-card img {
@@ -141,12 +147,19 @@
         .product-card h3 {
             font-family: 'Poppins', sans-serif;
             margin: 0.5rem 0;
+            text-align: center;    /* headings centered */
         }
 
         .product-card p {
             margin: 0.4rem 0 0.8rem;
             font-size: 0.95rem;
             color: #f2f2f2;
+        }
+
+        /* descriptions cleaner: justify text */
+        .products-section .product-card p,
+        .vehicles .product-card p {
+            text-align: justify;
         }
 
         .explore-btn,
@@ -280,6 +293,11 @@
         .products-section .product-card:hover {
             transform: scale(1.03);
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* push Buy Now (nav) to bottom of card */
+        .products-section .product-card nav {
+            margin-top: auto;
         }
 
         .color-buttons {
@@ -542,7 +560,7 @@
                 justify-content: center;
             }
         }
-    </style>
+        </style>
 </head>
 <body>
     <header>
@@ -696,7 +714,11 @@
             <div class="product-card">
                 <img class="vehicle-image" src="image.png" alt="Vehicle 1" id="vehicle1_image">
                 <h3>Rhyno SE03 Lite</h3>
-                <p>Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. Check out the other details below!</p>
+                <p>Experience the perfect blend of efficiency and comfort with the Rhyno SE03 Lite.
+Powered by a 1500W motor, this variant is designed for smooth, effortless rides while still delivering an impressive 80–100 km range on a single charge. Its advanced LFP battery ensures fire-safe performance, long lifecycle, and reliable power delivery in all weather conditions.
+
+Lightweight yet sturdy, the SE03 Lite is ideal for daily commutes, providing stability, comfort, and a safe riding experience—every time.
+Explore more details below and see why it’s the perfect entry into the Rhyno family.</p>
                 <div class="color-buttons">
                     <button class="color-button" style="background-color: red;" onclick="document.getElementById('vehicle1_image').src='red.png'"></button>
                     <button class="color-button" style="background-color:black;" onclick="document.getElementById('vehicle1_image').src='black.png'"></button>
@@ -711,8 +733,13 @@
             </div>
             <div class="product-card">
                 <img class="vehicle-image" src="bike.png" alt="Vehicle 2" id="vehicle2_image">
+                <h4></h4>
                 <h3>Rhyno SE03</h3>
-                <p>Indulge in the perfect harmony of power and range with this Rhyno. Offering an exhilarating experience with its robust 2000W motor, it ensures a thrilling ride while still delivering an impressive 80-100km range on a single charge. Like its counterparts, this machine features the safety assurance of a fire-safe advanced LFP battery, along with the comprehensive benefits of owning a Rhyno. Boasting a formidable combination of a 2000W motor and a 2.7kWh battery, this beast is ready to roar on the roads, providing an electrifying journey at every turn. Check out the other details below!</p>
+                <p>Step into a more powerful and thrilling riding experience with the Rhyno SE03.
+Equipped with a refined 2000W motor, it offers a stronger acceleration and smoother performance, maintaining the same impressive 80–100 km range depending on riding style. With the trusted LFP battery technology, you get enhanced safety, longer life, and superior reliability on long rides.
+
+ The SE03 delivers a more commanding road presence and an electrifying journey at every turn.
+Scroll down to view the complete specifications and features!</p>
                 <div class="color-buttons">
                     <button class="color-button" style="background-color: gold;" onclick="document.getElementById('vehicle2_image').src='golden.png'"></button>
                     <button class="color-button" style="background-color: black;" onclick="document.getElementById('vehicle2_image').src='black.png'"></button>
@@ -727,8 +754,11 @@
             </div>
             <div class="product-card">
                 <img class="vehicle-image" src="Rhynoelectric.jpg" alt="Vehicle 3" id="vehicle3_image">
+                <h5></h5>
                 <h3>Rhyno SE03 Max</h3>
                 <p>This Rhyno is tuned for long drives and no thrills. Like all other variants, this machine comes with a fire-safe advanced LFP battery and all the other benefits of owning a Rhyno, along with a perfect blend of battery capacity and motor power to provide up to 150 km range on a single charge. While it may not provide a thrilling ride, it promises a dependable and unwavering presence on the long stretches. </p>
+               <h2></h2>
+               <h2></h2>
                 <div class="color-buttons">
                     <button class="color-button" style="background-color: black;" onclick="document.getElementById('vehicle3_image').src='black.png'"></button>
                     <button class="color-button" style="background-color: yellow;" onclick="document.getElementById('vehicle3_image').src='golden.png'"></button>
